@@ -67,8 +67,8 @@ Returns generate json data in JSON:API format.
 Response Example:
 
 [
- {
-    "_id": "67c88185c09c537161b7a005",
+  {
+    "_id": "67c882d34dbe1701e628839a",
     "label": "string",
     "role": [
       "string"
@@ -78,20 +78,17 @@ Response Example:
     "grid": {
       "row": [
         {
-          "label": "string",
           "highlight": false,
+          "label": "string",
           "column": [
             {
               "lg": 0,
               "md": 0,
-              "sm": 0,
-              "_id": "67c88185c09c537161b7a008"
+              "sm": 0
             }
-          ],
-          "_id": "67c88185c09c537161b7a007"
+          ]
         }
-      ],
-      "_id": "67c88185c09c537161b7a006"
+      ]
     },
     "variabel": [
       null
@@ -114,11 +111,11 @@ Response Example:
         "variabel": [
           null
         ],
-        "_id": "67c88185c09c537161b7a009"
+        "_id": "67c882d34dbe1701e628839b"
       }
     ],
-    "createdAt": "2025-03-05T16:53:25.544Z",
-    "updatedAt": "2025-03-05T16:53:25.544Z"
+    "createdAt": "2025-03-05T16:58:59.307Z",
+    "updatedAt": "2025-03-05T16:58:59.307Z"
   }
 ]
 
