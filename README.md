@@ -15,6 +15,7 @@ A **Nestjs** API that generate json data, stores it in **MongoDB**, and provides
 - **Nestjs** (v10.4.5)
 - **Express.js** (API framework)
 - **Mongoose** (MongoDB ORM)
+- **NestJS Swagger** (Open API Documentation)
 - **cross-env** (Environment variables)
 - **class-validator** (data validatiaon)
 - **class-transformer** (data transformer)
@@ -42,9 +43,16 @@ APP_PORT=7000
 MONGO_CONSTRING=mongodb://localhost:27017/ppapp
 
 5️⃣ Start the API Server
+
 you can start the server with these command below 
+
 *)  pnpm start
+
 *)  pnpm start:dev
+
+Swagger API Endpoints
+
+http://localhost:7000/ 
 
 API Endpoints
 
