@@ -38,14 +38,8 @@ pnpm install
 Create a config env file and add:
 
 APP_PORT=7000
-MONGO_DB=ppapp
-MONGO_USER=
-MONGO_PASSWORD=
-MONGO_HOST=127.0.0.1
-MONGO_PORT=27017
-MONGO_AUTHMECHANISM=SCRAM-SHA-256
-MONGO_ATLAS= false
-MONGO_CONSTRING=mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}
+
+MONGO_CONSTRING=mongodb://localhost:27017/ppapp
 
 5️⃣ Start the API Server
 you can start the server with these command below 
@@ -53,8 +47,11 @@ you can start the server with these command below
 *)  pnpm start:dev
 
 API Endpoints
+
 POST /generate-json
+
 GET /generate-json
+
 DELETE /generate-json
 
 Returns generate json data in JSON:API format.
