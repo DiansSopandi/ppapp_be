@@ -67,101 +67,58 @@ Returns generate json data in JSON:API format.
 Response Example:
 
 [
-  {
-    "_id": "67c8840d4dbe1701e628839d",
-    "label": "Dashboard Kependudukan",
+ {
+    "_id": "67c88185c09c537161b7a005",
+    "label": "string",
     "role": [
-      "BAPPEDA",
-      "KELURAHAN",
-      "DISDUKCAPIL",
-      "ADMIN",
-      "DKPKP",
-      "DSDA",
-      "DLH",
-      "SEKEL",
-      "KOTA"
+      "string"
     ],
-    "description": "Deskripsi tentang dashboard kependudukan",
-    "path_user": "/user/dashboard-grafik/",
+    "description": "string",
+    "path_user": "string",
     "grid": {
       "row": [
         {
-          "highlight": true,
-          "label": "Highlight Data",
-          "column": [
-            {
-              "lg": 12,
-              "md": 12,
-              "sm": 12
-            }
-          ]
-        },
-        {
+          "label": "string",
           "highlight": false,
-          "label": "Data Grafik",
           "column": [
             {
-              "lg": 12,
-              "md": 12,
-              "sm": 12
+              "lg": 0,
+              "md": 0,
+              "sm": 0,
+              "_id": "67c88185c09c537161b7a008"
             }
-          ]
+          ],
+          "_id": "67c88185c09c537161b7a007"
         }
-      ]
+      ],
+      "_id": "67c88185c09c537161b7a006"
     },
-    "variabel": [],
-    "show": true,
-    "icon": "icon_kependudukan",
+    "variabel": [
+      null
+    ],
+    "show": false,
+    "icon": "string",
     "grafik": [
       {
-        "dashboardId": 1,
+        "dashboardId": 0,
         "level_wilayah": [
-          "PROVINSI",
-          "KOTA",
-          "KECAMATAN",
-          "KELURAHAN",
-          "RW",
-          "RT"
+          "string"
         ],
-        "show": true,
-        "label": "Jumlah Penduduk Berdasarkan Jenis Kelamin",
-        "deskripsi": "Deskripsi Indikator Mengeluarkan chart atau agregat ini, misal indikator program yang dimiliki masing - masing stackholder chart ini",
-        "model_chart": "pie",
-        "row": 1,
-        "column": 2,
-        "column_size": 6,
+        "show": false,
+        "label": "string",
+        "deskripsi": "string",
+        "model_chart": "string",
+        "row": 0,
+        "column": 0,
+        "column_size": 0,
         "variabel": [
-          "jumlah_laki_laki",
-          "jumlah_perempuan"
+          null
         ],
-        "_id": "67c8840d4dbe1701e628839e"
-      },
-      {
-        "dashboardId": 1,
-        "level_wilayah": [
-          "PROVINSI",
-          "KOTA",
-          "KECAMATAN",
-          "KELURAHAN",
-          "RW",
-          "RT"
-        ],
-        "show": true,
-        "label": "Jumlah Penduduk Berdasarkan Kepemilikan KTP",
-        "deskripsi": "Deskripsi Indikator Mengeluarkan chart atau agregat ini, misal indikator program yang dimiliki masing - masing stackholder chart ini",
-        "model_chart": "donut",
-        "row": 1,
-        "column": 2,
-        "column_size": 6,
-        "variabel": [
-          "jumlah_ktp_dki",
-          "jumlah_ktp_non_dki"
-        ],
-        "_id": "67c8840d4dbe1701e628839f"
+        "_id": "67c88185c09c537161b7a009"
       }
     ],
-    "createdAt": "2025-03-05T17:04:13.063Z",
-    "updatedAt": "2025-03-05T17:04:13.063Z"
+    "createdAt": "2025-03-05T16:53:25.544Z",
+    "updatedAt": "2025-03-05T16:53:25.544Z"
   }
 ]
 
