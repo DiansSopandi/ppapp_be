@@ -1,85 +1,166 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Generate JSON API 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+A **Nestjs** API that generate json data, stores it in **MongoDB**, and provides a **JSON:API-compliant** RESTful API.
 
-## Description
+## 🚀 Features
+✅ Create, Read, Delete 
+✅ Saves generate json data in **MongoDB**  
+✅ Exposes a **JSON:API-compliant REST API**  
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+---
 
-## Project setup
+## 📌 Tech Stack
+- **Node.js** (v20.18.0)
+- **Nestjs** (v10.4.5)
+- **Express.js** (API framework)
+- **Mongoose** (MongoDB ORM)
+- **cross-env** (Environment variables)
+- **class-validator** (data validatiaon)
+- **class-transformer** (data transformer)
 
-```bash
-$ pnpm install
-```
 
-## Compile and run the project
+---
 
-```bash
-# development
-$ pnpm run start
+## 📂 Project Setup
 
-# watch mode
-$ pnpm run start:dev
+1️⃣ Clone the Repository  
+git clone https://github.com/DiansSopandi/ppapp_be.git
 
-# production mode
-$ pnpm run start:prod
-```
+cd ppapp_be
 
-## Run tests
+2️⃣ Install Dependencies
 
-```bash
-# unit tests
-$ pnpm run test
+pnpm install
 
-# e2e tests
-$ pnpm run test:e2e
+3️⃣ Configure Environment Variables
 
-# test coverage
-$ pnpm run test:cov
-```
+Create a config env file and add:
 
-## Resources
+APP_PORT=7000
+MONGO_DB=ppapp
+MONGO_USER=
+MONGO_PASSWORD=
+MONGO_HOST=127.0.0.1
+MONGO_PORT=27017
+MONGO_AUTHMECHANISM=SCRAM-SHA-256
+MONGO_ATLAS= false
+MONGO_CONSTRING=mongodb://${MONGO_HOST}:${MONGO_PORT}/${MONGO_DB}
 
-Check out a few resources that may come in handy when working with NestJS:
+5️⃣ Start the API Server
+you can start the server with these command below 
+*)  pnpm start
+*)  pnpm start:dev
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+API Endpoints
+POST /generate-json
+GET /generate-json
+DELETE /generate-json
 
-## Support
+Returns generate json data in JSON:API format.
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Response Example:
 
-## Stay in touch
+[
+  {
+    "_id": "67c8840d4dbe1701e628839d",
+    "label": "Dashboard Kependudukan",
+    "role": [
+      "BAPPEDA",
+      "KELURAHAN",
+      "DISDUKCAPIL",
+      "ADMIN",
+      "DKPKP",
+      "DSDA",
+      "DLH",
+      "SEKEL",
+      "KOTA"
+    ],
+    "description": "Deskripsi tentang dashboard kependudukan",
+    "path_user": "/user/dashboard-grafik/",
+    "grid": {
+      "row": [
+        {
+          "highlight": true,
+          "label": "Highlight Data",
+          "column": [
+            {
+              "lg": 12,
+              "md": 12,
+              "sm": 12
+            }
+          ]
+        },
+        {
+          "highlight": false,
+          "label": "Data Grafik",
+          "column": [
+            {
+              "lg": 12,
+              "md": 12,
+              "sm": 12
+            }
+          ]
+        }
+      ]
+    },
+    "variabel": [],
+    "show": true,
+    "icon": "icon_kependudukan",
+    "grafik": [
+      {
+        "dashboardId": 1,
+        "level_wilayah": [
+          "PROVINSI",
+          "KOTA",
+          "KECAMATAN",
+          "KELURAHAN",
+          "RW",
+          "RT"
+        ],
+        "show": true,
+        "label": "Jumlah Penduduk Berdasarkan Jenis Kelamin",
+        "deskripsi": "Deskripsi Indikator Mengeluarkan chart atau agregat ini, misal indikator program yang dimiliki masing - masing stackholder chart ini",
+        "model_chart": "pie",
+        "row": 1,
+        "column": 2,
+        "column_size": 6,
+        "variabel": [
+          "jumlah_laki_laki",
+          "jumlah_perempuan"
+        ],
+        "_id": "67c8840d4dbe1701e628839e"
+      },
+      {
+        "dashboardId": 1,
+        "level_wilayah": [
+          "PROVINSI",
+          "KOTA",
+          "KECAMATAN",
+          "KELURAHAN",
+          "RW",
+          "RT"
+        ],
+        "show": true,
+        "label": "Jumlah Penduduk Berdasarkan Kepemilikan KTP",
+        "deskripsi": "Deskripsi Indikator Mengeluarkan chart atau agregat ini, misal indikator program yang dimiliki masing - masing stackholder chart ini",
+        "model_chart": "donut",
+        "row": 1,
+        "column": 2,
+        "column_size": 6,
+        "variabel": [
+          "jumlah_ktp_dki",
+          "jumlah_ktp_non_dki"
+        ],
+        "_id": "67c8840d4dbe1701e628839f"
+      }
+    ],
+    "createdAt": "2025-03-05T17:04:13.063Z",
+    "updatedAt": "2025-03-05T17:04:13.063Z"
+  }
+]
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-## License
+Development Notes:
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+Ensure MongoDB is running locally (mongod) or use MongoDB Atlas.
