@@ -5,7 +5,9 @@ A **Nestjs** API that generate json data, stores it in **MongoDB**, and provides
 
 ## 🚀 Features
 ✅ Create, Read, Delete 
+
 ✅ Saves generate json data in **MongoDB**  
+
 ✅ Exposes a **JSON:API-compliant REST API**  
 
 ---
